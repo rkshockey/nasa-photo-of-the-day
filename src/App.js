@@ -29,6 +29,14 @@ function App() {
       .catch(err => console.log(err))
   }, [currentCal])
 
+  useEffect(() => {
+    for (let i = 0; i < nasaData.length; i++){
+      if (nasaData[i].date === date){
+        setCurrentData(nasaData[i])
+      }
+    }
+  }, [date, nasaData])
+
   function pickDate (date){
     setDate(date)
   }
