@@ -19,7 +19,7 @@ function YearTab(props){
 
     return (
         <div className='years'>
-            {years.map(year => <button onClick={() => click(year)}>{year}</button>)}
+            {years.map(year => <button onClick={() => click(year)} key={year}>{year}</button>)}
         </div>
     )
 }
