@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 
+//Setting up git!
+
 function App() {
   return (
     <div className="App">
