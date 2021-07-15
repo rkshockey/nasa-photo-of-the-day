@@ -15,6 +15,7 @@ const StyledContainer = styled.div`
   color: ${props => props.theme.black};
   background: ${props => props.theme.genBack};
   padding: 2%;
+  box-sizing: border-box;
 `
 
 function App() {
