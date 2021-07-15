@@ -8,6 +8,13 @@ import YearTab from './Components/year'
 import MonthTab from './Components/month'
 import SelectedDate from './Components/selectedDate'
 import CardBlock from './Components/cardBlock'
+import styled from 'styled-components'
+
+const StyledContainer = styled.div`
+  text-align: center;
+  color: ${props => props.theme.black};
+  background: ${props => props.theme.genBack};
+`
 
 function App() {
   const [year, setYear] = useState(`2021`);
@@ -42,13 +49,13 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <StyledContainer>
       <h1>NASA Astronomy Picture of the Day</h1>
       <YearTab setYear={setYear} calendar={calendar} />
       <MonthTab setMonth={setMonth} year={year} calendar={calendar} />
       <SelectedDate date={date} currentData={currentData} />
       <CardBlock nasaData={nasaData} year={year} month={month} pickDate={pickDate} />
-    </div>
+    </StyledContainer>
   );
 }
 
