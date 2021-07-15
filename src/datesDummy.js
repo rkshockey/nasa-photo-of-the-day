@@ -6,7 +6,7 @@ export default {
         Apr: 30,
         May: 31,
         Jun: 30,
-        Jul: 14,
+        Jul: 15,
     },
     2020: {
         Jan: 31,

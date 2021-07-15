@@ -14,12 +14,13 @@ const StyledContainer = styled.div`
   text-align: center;
   color: ${props => props.theme.black};
   background: ${props => props.theme.genBack};
+  padding: 2%;
 `
 
 function App() {
   const [year, setYear] = useState(`2021`);
   const [month, setMonth] = useState(`Jul`);
-  const [date, setDate] = useState(`2021-07-14`);
+  const [date, setDate] = useState(`2021-07-15`);
   const [nasaData, setNasaData] = useState([]);
   const [currentData, setCurrentData] = useState({});
   const [calendar, setCalendar] = useState(calendarD);
