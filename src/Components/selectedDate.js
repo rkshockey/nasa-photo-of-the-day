@@ -1,13 +1,13 @@
 import React from 'react'
-import { scifi_url } from '../constants'
+import MediaDisplay from './mediaDisplay'
 
 function SelectedDate (props) {
     const { date, currentData } = props
     return (
         <div className='selected-date'>
-            <p>Current date is {date}</p>
+            <h3>{date}</h3>
             <h2>{currentData.title}</h2>
-            <img src={currentData.media_type === 'image' ? currentData.url : scifi_url} />
+            <MediaDisplay type={currentData.media_type} url={currentData.url} />
             <p>{currentData.explanation}</p>
         </div>
     )
