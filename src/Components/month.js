@@ -1,4 +1,20 @@
-import React from "react";;
+import React from "react";
+import styled from 'styled-components'
+
+const StyledMonths = styled.div`
+    background: ${({theme: { color2a }}) => color2a};
+    padding: 2%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-around;
+`
+const StyledButton = styled.button`
+    background: ${({theme: { color2b }}) => color2b};
+    padding: 0.5%;
+    font-weight: bold;
+    color: white;
+`
 
 function MonthTab(props){
     const { setMonth, year, calendar } = props
@@ -18,9 +34,9 @@ function MonthTab(props){
     const months = iterate(calendar[`${year}`])
 
     return (
-        <div className='months'>
-            {months.map(month => <button onClick={() => click(month)} key={month}>{month}</button>)}
-        </div>
+        <StyledMonths>
+            {months.map(month => <StyledButton onClick={() => click(month)} key={month}>{month}</StyledButton>)}
+        </StyledMonths>
     )
 }
 

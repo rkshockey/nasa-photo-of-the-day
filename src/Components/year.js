@@ -1,5 +1,19 @@
-import React from "react";;
+import React from "react";
+import styled from 'styled-components'
 
+const StyledYears = styled.div`
+    background: ${({theme: { color1a }}) => color1a};
+    padding: 2%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-around;
+`
+const StyledButton = styled.button`
+    background: ${({theme: { color1b }}) => color1b};
+    padding: 0.5%;
+    font-weight: bold;
+`
 function YearTab(props){
     const { setYear, calendar } = props
 
@@ -18,9 +32,9 @@ function YearTab(props){
     const years = iterate(calendar)
 
     return (
-        <div className='years'>
-            {years.map(year => <button onClick={() => click(year)} key={year}>{year}</button>)}
-        </div>
+        <StyledYears>
+            {years.map(year => <StyledButton onClick={() => click(year)} key={year}>{year}</StyledButton>)}
+        </StyledYears>
     )
 }
 
